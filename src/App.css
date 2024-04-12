@@ -1,5 +1,9 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full viewport height */
+  margin: 0;
 }
 
 .App-logo {
@@ -22,6 +26,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  flex: 0 1 auto;
 }
 
 .App-link {
@@ -35,4 +40,13 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.chat-area {
+  flex: 1 1 auto; /* Chat area takes up the remaining space */
+  overflow-y: auto; /* Adds scroll to the chat area */
+}
+
+.input-area {
+  flex: 0 1 auto; /* Input area size is content-based */
 }
